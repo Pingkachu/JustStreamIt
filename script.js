@@ -5,7 +5,7 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("modal__close")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
@@ -24,16 +24,40 @@ window.onclick = function(event) {
   }
 }
 
-fetch('http://localhost:8000/api/v1/titles/?year=2000&imdb_score_min=8.8')
+var ul = document.createElement('ul');
+        ul.setAttribute('id','proList');
+
+        productList = ['Electronics Watch','House wear Items','Kids wear','Women Fashion'];
+
+        document.getElementById('renderList').appendChild(ul);
+        productList.forEach(renderProductList);
+
+        function renderProductList(element, index, arr) {
+            var li = document.createElement('li');
+            li.setAttribute('class','item');
+
+            ul.appendChild(li);
+
+            li.innerHTML=li.innerHTML + element;
+        }
+
+  fetch('http://localhost:8000/api/v1/titles/?sort_by=-imdb_score')
       .then(function(res) {
         if (res.ok) {
           return res.json();
         }
       })
       .then(function(value) {
-        console.log(value.results[0]['image_url']);
+        let bestMovie = value.results[0];
+        var img = document.createElement('img');
+        img.setAttribute('id', 'best-movie__picture');
+        img.setAttribute('src', bestMovie['image_url']);
+        document.getElementById('myBtn').appendChild(img);
+
+        document.getElementsByClassName("best-movie__title").innerHTML = bestMovie['title'];
+        console.log(bestMovie['title']);
       })
       .catch(function(err) {
         // Une erreur est survenue
       });
-
+  

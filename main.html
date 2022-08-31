@@ -6,23 +6,60 @@
     <title>JustStreamIt</title>
 </head>
 <body>
-    <!-- Les comédies françaises -->
-      <section class="comédies francaises">
-        <h2>Comédies françasies</h2>
+    <header>
+        
+    </header>
+    <section id="best-movie">
+        <button class="best-movie__info" id="myBtn">
+        </button> 
+        <h1 class="best-movie__title"></h1>
+    </section>
+   
+   <!-- Top rated films -->
+    <section class="top-rated-film">
+        <h2>Film les mieux notés</h2>
         <div class="list">
         <a href=""><img src="" alt=""></a>
         </div>
-      </section>
-    <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Affiche du film</button>
+    </section>
+
+    <!-- Top rated Cat 1 films-->
+    <section class="cat1">
+        <h2>Catégorie 1</h2>
+        <div class="list">
+        <a href=""><img src="" alt=""></a>
+        </div>
+    </section>
+
+    <!-- Top rated Cat 2 films-->
+    <section class="cat2">
+        <h2>Catégorie 2</h2>
+        <div class="list">
+        <a href=""><img src="" alt=""></a>
+        </div>
+    </section>
+
+    <!-- Top rated Cat 3 films-->
+    <section class="cat3">
+        <h2>Catégorie 3</h2>
+        <div class="list">
+        <a href=""><img src="" alt=""></a>
+        </div>
+    </section>
+
     <!-- The Modal -->
-    <div id="myModal" class="modal">
-    <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close">&times;</span>
+    <section id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal__content">
+            <span class="modal__close">&times;</span>
             <p>Informations du film</p>
         </div>
-    </div>
-<script type="text/javascript" src="script.js"></script>
+    </section>
+
+    <section class="test">
+        <div id="renderList"></div>
+    </section>
+
 </body>
+<script type="text/javascript" src="script.js"></script>
 </html>
