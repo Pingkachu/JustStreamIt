@@ -1,3 +1,50 @@
+body {
+    background-color: black;
+    text-align: center;
+    color:  white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+header {
+    display: flex;
+    justify-content: flex-starts;
+    width : 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-color: darkred;
+    text-shadow: none;
+    border-radius: 10px;
+    h1 {
+        margin-left: 50px;
+    }
+}
+
+.links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    a {
+        margin-right: 100px;
+        margin-top: auto;
+        margin-bottom: auto;
+        text-decoration: none;
+        font-size: large;
+        font-weight:  bold;
+        color: white;
+    }
+}
+
+section {
+    /*firefox*/
+    scrollbar-width: none;
+
+    /* Chrome et Safari*/
+    &::-webkit-scrollbar {
+        display: none;
+    }
+} 
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -11,13 +58,25 @@
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     /* Modal Content/Box */
-    &__content {
-         background-color: silver;
+    &__window {
+         background-color: black;
          margin: 15% auto; /* 15% from the top and centered */
          padding: 20px;
          border: 1px solid #888;
          width: 80%; /* Could be more or less, depending on screen size */
     }
+    &__content {
+        display: flex;
+        justify-content: flex-starts;
+        text-align : left;
+        ul {
+            list-style-type: none;
+            li {
+                padding : 3px;
+            }
+        }
+    }
+
         /* The Close Button */
     &__close {
         color: #aaa;
@@ -25,10 +84,90 @@
         font-size: 28px;
         font-weight: bold;
         &:hover, &:focus {
-            color: black;
+            color: white;
             text-decoration: none;
             cursor: pointer;
+            transform: scale(1.5);
         }
     }
 }
+
+.row {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 1000px;
+    &__container {
+        display: flex;
+        justify-content: flex-starts;
+        overflow: auto;
+        &:hover ~ .row__indicator{
+            display: inline;
+        }
+    }
+    &__content {
+        width: 190px;
+        height: 300px;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: 2px;
+    }
+    &__indicator {
+        display: none;
+        top:  0;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 60px;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute;
+        background: rgba(0,0,0, .5);
+        &:hover{
+            display: inline;
+        }
+    }
+    &__next {
+        right: 0;
+    }
+    &__previous {
+        left: 0;
+    }
+}
+
+.best-movie {
+    position: relative;
+    width: 1000px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    &__picture {
+        width: 1000px;
+        height: 200px;
+        border-radius: 2px;
+    }
+    &__title {
+        position: absolute;
+        top: 30%;
+        left:  5%;
+        color:  white;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+    &__button {
+        position: absolute;
+        top: 60%;
+        left:  5%;
+        color:  white;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        &:hover {
+            background-color: darkred;
+            cursor:  pointer;
+        }
+    }
+}
+
+/* width */
 

@@ -7,57 +7,65 @@
 </head>
 <body>
     <header>
-        
+        <h1>JustStreamIt</h1>
+        <div class="links">
+            <a href="main.html">Accueil</a>
+            <a href="main.html#actionMovies">Catégories</a>
+        </div>
     </header>
-    <section id="best-movie">
-        <button class="best-movie__info" id="myBtn">
-        </button> 
-        <h1 class="best-movie__title"></h1>
+
+    <section id="bestMovie" class="best-movie">
     </section>
    
-   <!-- Top rated films -->
-    <section class="top-rated-film">
-        <h2>Film les mieux notés</h2>
-        <div class="list">
-        <a href=""><img src="" alt=""></a>
-        </div>
-    </section>
+    <!-- Top rated films -->
+    <h2>Films les mieux notés</h2>
+    <div class="row">
+        <section id="topRatedMovies" class="row__container">
+        </section>
+    </div>
 
     <!-- Top rated Cat 1 films-->
-    <section class="cat1">
-        <h2>Catégorie 1</h2>
-        <div class="list">
-        <a href=""><img src="" alt=""></a>
-        </div>
-    </section>
+    <h2>Films d'Action</h2>
+    <div class="row">
+        <section id="actionMovies" class="row__container">
+        </section>
+    </div>
 
     <!-- Top rated Cat 2 films-->
-    <section class="cat2">
-        <h2>Catégorie 2</h2>
-        <div class="list">
-        <a href=""><img src="" alt=""></a>
-        </div>
-    </section>
+    <h2>Film Français</h2>
+    <div class="row">
+        <section id="frenchMovies" class="row__container">
+        </section>
+    </div>
 
     <!-- Top rated Cat 3 films-->
-    <section class="cat3">
-        <h2>Catégorie 3</h2>
-        <div class="list">
-        <a href=""><img src="" alt=""></a>
-        </div>
-    </section>
+    <h2>Film avec Morgan Freeman</h2>
+    <div class="row">
+        <section id="freemanMovies" class="row__container">
+        </section>
+    </div>
 
     <!-- The Modal -->
     <section id="myModal" class="modal">
         <!-- Modal content -->
-        <div class="modal__content">
+        <div class="modal__window">
             <span class="modal__close">&times;</span>
-            <p>Informations du film</p>
+            <h1 id="movieTitle" class="modal__title">Titre du film</h1>
+            <div class="modal__content">
+                <img class="modal__picture" id="moviePicture" src="" alt="Image du film" />
+                <ul class="modal__list">
+                    <li class="modal__list__item" id ="movieGenres"></li>
+                    <li class="modal__list__item" id ="movieReleaseDate"></li>
+                    <li class="modal__list__item" id ="movieRated"></li>
+                    <li class="modal__list__item" id ="movieImdbScore"></li>
+                    <li class="modal__list__item" id ="movieDirector"></li>
+                    <li class="modal__list__item" id ="movieActors"></li>
+                    <li class="modal__list__item" id ="movieCountry"></li>
+                    <li class="modal__list__item" id ="movieGrossIncome"></li>
+                    <li class="modal__list__item" id ="movieDescritpion"></li>
+                </ul>
+            </div>
         </div>
-    </section>
-
-    <section class="test">
-        <div id="renderList"></div>
     </section>
 
 </body>
