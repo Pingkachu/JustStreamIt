@@ -82,9 +82,6 @@ function getBestMovie() {
       document.getElementById('bestMovie').appendChild(img);
       document.getElementById('bestMovie').appendChild(text);
       document.getElementById('bestMovie').appendChild(btn);
-
-
-
       console.log(value.results[0]);
     }) 
     .catch(function(err) {
@@ -155,7 +152,6 @@ function getMovieInfo(url) {
         for (let i=0; i<3; i++) {
           actors += movie['actors'][i] + ", ";
         }
-
         document.getElementById('moviePicture').src = movie['image_url'];
         document.getElementById('movieTitle').innerHTML = movie['title'];
         document.getElementById('movieGenres').innerHTML = movie['genres'];

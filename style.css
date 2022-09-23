@@ -19,13 +19,12 @@ header {
 header h1 {
   margin-left: 50px;
 }
-
-.links {
+header .menu {
   flex: 1;
   display: flex;
   justify-content: flex-end;
 }
-.links a {
+header .menu a {
   margin-right: 100px;
   margin-top: auto;
   margin-bottom: auto;
@@ -139,28 +138,24 @@ section::-webkit-scrollbar {
 .best-movie {
   position: relative;
   width: 1000px;
-  height: 200px;
+  height: 300px;
   margin-left: auto;
   margin-right: auto;
 }
 .best-movie__picture {
-  width: 1000px;
-  height: 200px;
+  width: 190px;
+  height: 300px;
   border-radius: 2px;
 }
 .best-movie__title {
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 5%;
-  color: white;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .best-movie__button {
   position: absolute;
-  top: 60%;
+  top: 40%;
   left: 5%;
-  color: white;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .best-movie__button:hover {
   background-color: darkred;

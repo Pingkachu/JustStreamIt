@@ -18,9 +18,7 @@ header {
     h1 {
         margin-left: 50px;
     }
-}
-
-.links {
+    .menu {
     flex: 1;
     display: flex;
     justify-content: flex-end;
@@ -33,6 +31,7 @@ header {
         font-weight:  bold;
         color: white;
     }
+}
 }
 
 section {
@@ -76,7 +75,6 @@ section {
             }
         }
     }
-
         /* The Close Button */
     &__close {
         color: #aaa;
@@ -141,27 +139,23 @@ section {
 .best-movie {
     position: relative;
     width: 1000px;
-    height: 200px;
+    height: 300px;
     margin-left: auto;
     margin-right: auto;
     &__picture {
-        width: 1000px;
-        height: 200px;
+        width: 190px;
+        height: 300px;
         border-radius: 2px;
     }
     &__title {
         position: absolute;
-        top: 30%;
+        top: 20%;
         left:  5%;
-        color:  white;
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
     &__button {
         position: absolute;
-        top: 60%;
+        top: 40%;
         left:  5%;
-        color:  white;
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         &:hover {
             background-color: darkred;
             cursor:  pointer;
